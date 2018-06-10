@@ -4,19 +4,21 @@ queue()
   
   function makeGraphs (error, Photosdata){
       var ndx=crossfilter(Photosdata);
-     
-      Photosdata.forEach(function (d){
-       d.Photos=parseInt(d.Photos);
-        d.yrsWorking=parseInt(d["yrsWorking"]);
-      });
-      
-       
+    
+    
+    
+       Photosdata.forEach(function(d){
+            d.yrsWorking = parseInt(d['yrsWorking'])
+            d.started=parseInt(d.started);
+        });
       
       show_data_bar(ndx);
       show_select_bar(ndx);
       show_pie_chart(ndx);
-      show_scatter_chart(ndx); 
+      show_composite_chart(ndx);
+      
        dc.renderAll();
+        
        
   }
   
@@ -28,7 +30,14 @@ function show_select_bar(ndx){
     dc.selectMenu("#selector")
     .dimension(dim)
     .group(group);
+    
  }
+ 
+ 
+       var namecolor= d3.scale.ordinal()
+                .domain(["Artist","Athlete","Politician"])
+                .range(["#ff6600",  "#ff9933","#9933ff"]);
+                
               var gendercolor= d3.scale.ordinal()
                 .domain(["male","female"])
                 .range(["#ff6600",  "#ff0066"]);
@@ -40,7 +49,7 @@ function show_select_bar(ndx){
       
       function show_pie_chart(ndx){
             var pie_dim=ndx.dimension(dc.pluck('proffesional'));
-            var pie_group=pie_dim.group();
+            var pie_group=pie_dim.group().reduceCount();
             
             dc.pieChart('#pie')
             .height(300)
@@ -48,7 +57,8 @@ function show_select_bar(ndx){
             .transitionDuration(550)
             .dimension(pie_dim)
             .group(pie_group)
-            .legend(dc.legend().x(80).y(5).itemHeight(13).gap(8))
+            
+            
             .colors(function(d){ return colorScale(d); });
              
       }
@@ -84,29 +94,52 @@ function show_select_bar(ndx){
        
   } 
   
-  function show_scatter_chart(ndx){
-      var ndim=ndx.dimension(dc.pluck('yrsWorking'));
-      var work_dim =ndx.dimension(function (d){
-                return [d.yrsWorking,d.Photos];
-      });
-      var minWorking=ndim.bottom(1)[0].yrsWorking;
-      var maxWorking=ndim.top(1)[0].yrsWorking;
+
+
+ 
+  function show_composite_chart(ndx){
+        
+  var years_dim = ndx.dimension(function (d){
+    return [d.yrsWorking,d.started];
+  });
+ 
+  var minYears= years_dim.bottom(1)[0].yrsWorking;
+  var maxYears= years_dim.top(1)[0].yrsWorking;
+ 
+  var years_group = years_dim.group().reduceSum(function (d){
+      return d.Photos;
+  });
+ 
+   
+   
+  dc.scatterPlot('#chart-composite')
+
+                .width(500)
+                .height(300)
+                .x(d3.scale.ordinal().domain([minYears,maxYears]))
+                
+                  
+                  
+                .brushOn(false)
+                .title(function (d){
+                  return "Started"+d.key[1];
+                })
+                .symbolSize(8)
+                .clipPadding(10)
+                .yAxisLabel("No of Photos")
+                 
+         
+               
+                .dimension(years_dim)
+                .group(years_group)
+                .margins({top:10 , right:50 , bottom:75, left:75});
+               
+    
       
-      var work_group=work_dim.group();
-      
-      dc.scatterPlot('#chart-scatter')
-      .width(400)
-      .height(300)
-      .x(d3.scale.linear().domain([minWorking,maxWorking]))
-      .brushOn(false)
-      .symbolSize(10)
-      .clipPadding(10)
-      .yAxisLabel("will")
-      .dimension(work_dim)
-      .group(work_group)
-      .margins({top:10,left:50,bottom:30,right:50});
-      
-      
+     
+    
+         
   }
+  
   
   
