@@ -5,13 +5,9 @@ queue()
   function makeGraphs (error, Photosdata){
       var ndx=crossfilter(Photosdata);
     
-    
-    
-       Photosdata.forEach(function(d){
-            d.yrsWorking = parseInt(d['yrsWorking'])
-            d.started=parseInt(d.started);
-        });
       
+    
+     
       show_data_bar(ndx);
       show_select_bar(ndx);
       show_pie_chart(ndx);
@@ -100,11 +96,11 @@ function show_select_bar(ndx){
   function show_composite_chart(ndx){
         
   var years_dim = ndx.dimension(function (d){
-    return [d.yrsWorking,d.started];
+    return [d.started,d.yrsWorking];
   });
  
-  var minYears= years_dim.bottom(1)[0].yrsWorking;
-  var maxYears= years_dim.top(1)[0].yrsWorking;
+  var minYears= years_dim.bottom(1)[0].started;
+  var maxYears= years_dim.top(1)[0].started;
  
   var years_group = years_dim.group().reduceSum(function (d){
       return d.Photos;
