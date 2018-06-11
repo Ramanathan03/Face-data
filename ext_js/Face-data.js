@@ -116,7 +116,7 @@ function show_select_bar(ndx){
 
                 .width(500)
                 .height(300)
-                .x(d3.scale.ordinal().domain([minYears,maxYears]))
+                .x(d3.scale.linear().domain([minYears,maxYears]))
                 
                   
                   
