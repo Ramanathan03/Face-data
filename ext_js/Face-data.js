@@ -5,8 +5,7 @@ queue()
   function makeGraphs (error, Photosdata){
       var ndx=crossfilter(Photosdata);
     
-      
-    
+     console.log(minYears, maxYears);
      
       show_data_bar(ndx);
       show_select_bar(ndx);
