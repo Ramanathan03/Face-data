@@ -5,7 +5,8 @@ queue()
   function makeGraphs (error, Photosdata){
       var ndx=crossfilter(Photosdata);
     
-    
+   
+
      
       show_data_bar(ndx);
       show_select_bar(ndx);
@@ -14,7 +15,7 @@ queue()
       
        dc.renderAll();
         
-       
+        
   }
   
  
@@ -98,20 +99,20 @@ function show_select_bar(ndx){
     return [d.started,d.yrsWorking];
   });
  
-  var minYears= years_dim.bottom(1)[0].started;
+   var minYears= years_dim.bottom(2)[0].started;
   var maxYears= years_dim.top(1)[0].started;
  
   var years_group = years_dim.group().reduceSum(function (d){
       return d.Photos;
   });
  
-   
+  
    
   dc.scatterPlot('#chart-composite')
 
                 .width(500)
                 .height(300)
-                .x(d3.scale.linear().domain([minYears,maxYears]))
+                .x(d3.scale.linear().domain([2006,maxYears]))
                 
                   
                   
@@ -128,13 +129,13 @@ function show_select_bar(ndx){
                 .dimension(years_dim)
                 .group(years_group)
                 .margins({top:10 , right:50 , bottom:75, left:75});
-               
-    
+  }
+  
       
      
     
          
-  }
+  
   
   
   
