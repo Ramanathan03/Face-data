@@ -142,7 +142,7 @@ function show_composite_chart(ndx) {
 function show_scatter_chart(ndx) {
 
     var sca_dim = ndx.dimension(function(d) {
-        return [d.UsageRank];
+        return [d.UsageRank] ;
     });
     
    
