@@ -33,7 +33,7 @@
         
     }
     %colorText{
-        color:White;
+        color:white;
         font-family: 'Engagement', cursive;
         font-size:15px;
         
@@ -41,7 +41,8 @@
     }
  
  
-div .dc-chart    {fill:white;}
+div .dc-chart   
+{fill:#7a8288;}
 .text{
     @extend %colorText;
 }

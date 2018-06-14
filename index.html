@@ -1,95 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    
-      <link rel="stylesheet" href="ext_css/main.css" type="text/css" />
-      <link rel="stylesheet" href="ext_css/bootstrap.min.css" type="text/css" />
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" type="text/css" />
-     
-  
-      <!--   js file of dc  d3 crossfilter  -->
-     
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-     
-     
-      
-    
+    <title>FDataD</title>
+
+    <link rel="stylesheet" href="ext_css/main.css" type="text/css" />
+    <link rel="stylesheet" href="ext_css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" type="text/css" />
+
+
+    <!--   js file of dc  d3 crossfilter  -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+
+
 </head>
+
 <body>
     <header class="container-fluid">
-    
-    <div class="row">
-        <div class="col-md-2" id="distance">
-        <a href="twitter.com"><i class="fab fa-twitter"></i>Twitter</a></div>
-    </div>
-    <div class="row ">
-        <div class="jumbotron" id="loveMe">
-            <h1>Facebook Data Dash</h1>
-            
+
+        <div class="row">
+            <div class="col-md-2" id="distance">
+                <a href="twitter.com"><i class="fab fa-twitter"></i>Twitter</a></div>
         </div>
-    </div>
+        <div class="row ">
+            <div class="jumbotron" id="loveMe">
+                <h1>Facebook Data Dash</h1>
+
+            </div>
+        </div>
     </header>
     <section class="container-fluid">
-            
+
         <div class="row">
             <div class="col-md-12 center">
-            <p>This website serves 2018 survive about celebrities facebook usage </p>
-            <p>We deliver with Responsive charts</p>
-            <p>notice: This charts contains specific celebrities celebrities </p>
-        </div>
-        </div>
-        
-        <div class="row ">
-            <div class="col-md-4">
-                <div id="chart_one"></div>
-                
-            </div>
-            <div class="col-md-4">
-                <div id="selector"></div>
-                <br>
-                <br>
-            <p class="text">I personally don't use Twitter, but I can attest that there are indeed plenty of celebrities on Facebook, all using their real names. They simply set their profiles to be unsearchable via Google or whatever. Also, if their profiles are of the type that they incessantly get friend "requests" from strangers, Facebook automatically pops up a little window warning any "requesters" who persistently make friend requests of this nature (perennially not accepted) will result in a suspension of that person's account, in an effort to protect the celebrities.</p>
-            </div>
-           <div class="col-md-4">
-                
-               <div id="pie" class="text"></div>
-           </div>
-        </div>
-        <div class="row ">
-            <div class="col-md-12">   
-                 
-      <div id="chart-composite"></div>
+                <p>This website serves 2018 survive about celebrities facebook usage </p>
+                <p>We deliver with Responsive charts</p>
+                <p>notice: This charts contains specific celebrities </p>
             </div>
         </div>
-        <div>
-          <h3 class="center">Find your Fb Profile</h3></div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            
-</div>
 
-       
-        
-        
+
+
+
+        <div id="selector"></div>
+
+        <div id="chart_one"></div>
+
+
+
+
+
+
+
+
+        <div id="pie" class="text"></div>
+
+
+        <div id="chart-composite"></div>
+
+        <div id="chart-scatter"></div>
+
+
+
+
+
+
     </section>
-    
-    
+
+
     <footer class="container-fluid">
-        
-        
-        
+
+
+
     </footer>
- <!-- Own JS files keep it nice G-->
+    <!-- Own JS files keep it nice G-->
+
+    <script type="text/javascript" src="ext_js/Face-data.js"></script>
     <script type="text/javascript" src="ext_js/face-api.js"></script>
-      <script type="text/javascript" src="ext_js/Face-data.js"></script>
 </body>
+
 </html>

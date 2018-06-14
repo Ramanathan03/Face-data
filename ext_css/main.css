@@ -24,12 +24,12 @@
   text-align: center; }
 
 .text {
-  color: White;
+  color: white;
   font-family: 'Engagement', cursive;
   font-size: 15px; }
 
 div .dc-chart {
-  fill: white; }
+  fill: #7a8288; }
 
 .no-violence {
   margin-left: 50; }
