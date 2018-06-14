@@ -135,8 +135,8 @@ function show_composite_chart(ndx) {
             return (d.key[0]);
         })
         
-        .colors(function(d) { return namecolor(d); })
-        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
+        .colors(function(d) { return namecolor(d); });
+        
 }
 
 function show_scatter_chart(ndx) {
