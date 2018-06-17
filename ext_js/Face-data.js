@@ -40,7 +40,7 @@ var gendercolor = d3.scale.ordinal()
     .range(["#ff6600", "#ff0066"]);
 
 var colorScale = d3.scale.ordinal().domain(["Artist", "Athlete", "Politician"])
-    .range(["#ff3377","#ff8000","#ff3333"]);
+    .range(["#ff3377", "#ff8000", "#ff3333"]);
 
 
 
@@ -70,7 +70,7 @@ function show_data_bar(ndx) {
 
 
     dc.barChart("#chart_one")
-        .width(400)
+        .width(380)
         .height(300)
         .margins({ top: 10, left: 50, bottom: 30, right: 50 })
         .dimension(name_dim)
@@ -111,7 +111,7 @@ function show_composite_chart(ndx) {
 
     dc.scatterPlot('#chart-composite')
 
-        .width(500)
+        .width(450)
         .height(300)
         .x(d3.scale.linear().domain([minYears, maxYears]))
         .y(d3.scale.linear().domain([0, 20]))
@@ -134,42 +134,40 @@ function show_composite_chart(ndx) {
         .colorAccessor(function(d) {
             return (d.key[0]);
         })
-        
+
         .colors(function(d) { return namecolor(d); });
-        
+
 }
 
 function show_scatter_chart(ndx) {
 
     var sca_dim = ndx.dimension(function(d) {
-        return [d.UsageRank] ;
+        return [d.UsageRank];
     });
-    
-   
-    
+
+
+
     var messi = sca_dim.group();
-    
-   
-    
+
+
+
     dc.barChart("#chart-scatter")
-        .width(600)
+        .width(420)
         .height(300)
         .dimension(sca_dim)
         .group(messi)
-       
-    
+
+
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        
+
         .title(function(d) {
-            return  " Usage Rank is  " + d.key[0];
+            return " Usage Rank is  " + d.key[0];
         })
-         
+
         .margins({ top: 10, right: 100, bottom: 30, left: 30 })
         .xAxisLabel("Usage Rank");
-        
+
 
 }
-
-
 

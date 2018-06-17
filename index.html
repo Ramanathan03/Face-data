@@ -7,80 +7,111 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FDataD</title>
 
-    <link rel="stylesheet" href="ext_css/main.css" type="text/css" />
+    
     <link rel="stylesheet" href="ext_css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" type="text/css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.css" />
+    <link rel="stylesheet" href="ext_css/main.css" type="text/css" />
 
     <!--   js file of dc  d3 crossfilter  -->
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
 
 
 
 
 </head>
 
-<body>
+<body class="back">
     <header class="container-fluid">
 
         <div class="row">
-            <div class="col-md-2" id="distance">
-                <a href="twitter.com"><i class="fab fa-twitter"></i>Twitter</a></div>
+            <div class="col-xs-2   col-md-2" id="distance">
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i>Twitter</a></div>
         </div>
         <div class="row ">
-            <div class="jumbotron" id="loveMe">
-                <h1>Facebook Data Dash</h1>
+            <div class="col-xs-12 col-md-12 " id="loveMe">
+                <h1><i class="fab fa-facebook-square"></i>Usage</h1>
+                
+                <button  class="button1 btn btn-default btn-lg btn-info" type="button" onclick="javascript:introJs().start().setOptions({ 'skipLabel': 'Exit', 'tooltipPosition': 'right' });"> Quick Intro <i class="fas fa-info-circle"></i></button>
 
             </div>
         </div>
-    </header>
-    <section class="container-fluid">
-
+        <br>
+        <br>
         <div class="row">
-            <div class="col-md-12 center">
+            <div class="col-xs-12 col-md-12 center see-me">
                 <p>This website serves 2018 survive about celebrities facebook usage </p>
                 <p>We deliver with Responsive charts</p>
                 <p>notice: This charts contains specific celebrities </p>
             </div>
         </div>
+    </header>
 
 
 
 
-        <div id="selector"></div>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-5 center" data-intro="Choose your celebrity name here and get his/her Facebook Information" id="selector">
+                <h5>Select Name  </h5>
+            </div>
+        </div>
+        
+        <div class="row">
 
-        <div id="chart_one"></div>
+            <div class="col-xs-12 col-md-4   center"  data-intro="This bar chart will gives you a gender information of your celebrities" id="chart_one">
+                <h5>Mens <i class="fas fa-male"></i> outnumber <i class="fas fa-female"></i> women</h5>
+            </div>
+            <div class="col-xs-4 col-md-3 center no-offence">
+                <br>
+                <br>
+                <br>
+                <p><strong>BarChart:</strong>Contain more mens then womens and this barChart help you show the gender of celebrities.
+                    <strong>PieChart:</strong>This chart contain the professional of the celebrities and we picked only three professional</p>
+            </div>
+            <div class="col-xs-12 col-md-4  center "  data-intro="This pie chart will gives you a information about your celebrities professional" id="pie">
+                <h5>Professional of celebrities</h5>
+            </div>
+        </div>
+        </div>
 
-       <div id="pie" class="text"></div>
 
 
-        <div id="chart-composite"></div>
+        <div class="row">
 
-        <div id="chart-scatter"></div>
+            <div class="col-xs-12 col-md-6  center"  data-intro="This chart gives you information of when your celebrities start Facebook officially" id="chart-composite">
+                <h5>Facebook Started Year and<br> Years on facebook </h5>
+            </div>
 
-
-
-
-
-
+            <div class="col-xs-12 col-md-6  center" data-intro="(last but not least)This chart gives you a facebook usage Rank of your celebrities "  id="chart-scatter">
+                <h5>Usage Rank </h5>
+            </div>
+        </div>
+        
+       
     </section>
-
-
-    <footer class="container-fluid">
-
-
+    <footer class="container-fluid text">
+        <div class="row ">
+            <div class="col-xs-12 col-md-10 center ">Designed and built with all the love in the world <br>Powered by someone &copy2018</div>
+            <div class="col-xs-1 col-md-2">
+                <a href="https://github.com/"><i class="fab fa-github">GITHUB</i></a>
+            </div>
+        </div>
 
     </footer>
+
+
     <!-- Own JS files keep it nice G-->
 
-    <script type="text/javascript" src="ext_js/Face-data.js"></script>
-    <script type="text/javascript" src="ext_js/face-api.js"></script>
+    <script src="ext_js/Face-data.js"></script>
+    
 </body>
 
 </html>

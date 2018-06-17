@@ -13,6 +13,14 @@
   text-align: center;
   text-decoration: none; }
 
+.button1 {
+  background-color: yellow; }
+
+.back {
+  background-image: url("images/space.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 #loveMe {
   width: 100%;
   height: 100%;
@@ -24,12 +32,19 @@
   text-align: center; }
 
 .text {
+  background-color: black;
+  width: 100%;
+  height: 50%; }
+
+.no-offence {
+  font-family: 'Open Sans', sans-serif;
   color: white;
-  font-family: 'Engagement', cursive;
-  font-size: 15px; }
+  font-size: 14px;
+  font-weight: 400; }
 
 div .dc-chart {
-  fill: #7a8288; }
+  fill: #ffa500;
+  font-family: 'Open Sans', sans-serif; }
 
 .no-violence {
   margin-left: 50; }
