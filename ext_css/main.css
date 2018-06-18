@@ -49,4 +49,8 @@ div .dc-chart {
 .no-violence {
   margin-left: 50; }
 
+@media (min-width: 576px) {
+  dc-chart .right {
+    width: 400; } }
+
 /*# sourceMappingURL=main.css.map */

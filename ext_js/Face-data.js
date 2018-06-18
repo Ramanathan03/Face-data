@@ -152,7 +152,7 @@ function show_scatter_chart(ndx) {
 
 
     dc.barChart("#chart-scatter")
-        .width(420)
+        .width(450)
         .height(300)
         .dimension(sca_dim)
         .group(messi)
@@ -171,3 +171,7 @@ function show_scatter_chart(ndx) {
 
 }
 
+$(window).resize(function(){
+   
+    show_composite_chart();
+})
