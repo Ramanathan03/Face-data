@@ -170,8 +170,3 @@ function show_scatter_chart(ndx) {
 
 
 }
-
-$(window).resize(function(){
-   
-    show_composite_chart();
-})
