@@ -27,6 +27,7 @@ function show_select_bar(ndx) {
     dc.selectMenu("#selector")
         .dimension(dim)
         .group(group);
+      
 
 }
 
@@ -86,7 +87,7 @@ function show_data_bar(ndx) {
 
 
         .xAxisLabel("Gender")
-        .yAxisLabel("No.of Photos")
+        
         .yAxis().ticks(20);
 
 }

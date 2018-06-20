@@ -13,6 +13,8 @@ My own further styling has been done within ext_css/main.css.
 
 The page also uses Intro.js for giving a quick tour to new users.
 
+I used Lucidchart for create my wireframe https://www.lucidchart.com/ 
+
 I used DC D3 crossfilter  queue for creating my charts.
 
 There are 18 functions that I used in this website 
@@ -23,7 +25,7 @@ There are 18 functions that I used in this website
 The layout of the page has been kept very basic to keep the methods obvious and simple.
     
 #### Testing 
- The JavaScript code was run on JSHint and returned no errors but It have 4 undefined variables it because The JS code has been seperate file I guess,This not going to affect my website. 
+ The JavaScript code was run on JSHint and returned no errors but It have 4 undefined variables it because my own JS code has  seperate file I guess,This not going to affect my website. 
 The HTML was run on the W3C Markup Validator and returned no errors.
 
  ##### Responsiveness
@@ -45,3 +47,8 @@ Screen width/Page display|Galaxy S5|Pixel 2|Pixel 2XL|iPhone 5/SE|iPhone 6/7/8|i
 11|X|X|X|X|X|X|X|X|
 12|X|X|X|X|X|X|X|X|
 13|X|X|X|X|X|X|X|X|
+
+###### Now The site Live at https://ramanathan03.github.io/faceD/ 
+###### I wrote code for these website in cloud9 https://ide.c9.io/ram03/milestone_2 
+###### Here is my wireframe link https://www.lucidchart.com/invitations/accept/95a3dcca-15fa-4f95-8d43-19418d196c3f
+
