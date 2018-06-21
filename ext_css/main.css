@@ -26,6 +26,10 @@
 .center {
   text-align: center; }
 
+.center-selector {
+  margin: auto;
+  text-align: center; }
+
 .text {
   background-color: black;
   width: 100%;
