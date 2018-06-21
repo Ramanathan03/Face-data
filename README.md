@@ -31,6 +31,9 @@ The HTML was run on the W3C Markup Validator and returned no errors.
  ##### Responsiveness
 Using Google Chrome developer tools to test how each stage of the application displays at different screen width.
 
+##### Dashboards are intended for full size screens 
+Why am I saying this in mobile-screen, charts are affecting my footer.
+
 
 
 
