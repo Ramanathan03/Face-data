@@ -41,6 +41,7 @@ All other functionality|X|X|X|X|X|
 ##### Responsiveness
 ##### Dashboards are intended for full size screens 
 Why am I saying this in mobile-screen, charts are affecting my footer.
+
 Screen width/ display|Galaxy S5|Pixel 2|Pixel 2XL|iPhone 5/SE|iPhone 6/7/8|iPhone 6/7/8 Plus|iPhone X|iPad|iPad Pro
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
 Header|X|X|X|X|X|X|X|X|X|
