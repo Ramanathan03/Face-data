@@ -28,11 +28,23 @@ The layout of the page has been kept very basic to keep the methods obvious and 
  The JavaScript code was run on JSHint and returned no errors but It have 4 undefined variables it because my own JS code has  seperate file I guess,This not going to affect my website. 
 The HTML was run on the W3C Markup Validator and returned no errors.
 
- ##### Responsiveness
-Using Google Chrome developer tools to test how each stage of the application displays at different screen width.
+The following is testing whether the code is working as expected.
 
+Browser/functionality test | Opera | Firefox | Chrome | Edge | Safari
+-----|-----|-----|-----|-----|-----
+Chart-Responsiveness|X|X|X|X|X|
+Social link|X|X|X|X|X|
+Intro|X|X|X|X|X|
+All other functionality|X|X|X|X|X|
+
+
+##### Responsiveness
 ##### Dashboards are intended for full size screens 
 Why am I saying this in mobile-screen, charts are affecting my footer.
+Screen width/ display|Galaxy S5|Pixel 2|Pixel 2XL|iPhone 5/SE|iPhone 6/7/8|iPhone 6/7/8 Plus|iPhone X|iPad|iPad Pro
+-----|-----|-----|-----|-----|-----|-----|-----|-----|-----
+Header|X|X|X|X|X|X|X|X|X|
+##### otherwise the text and other stuffs are well responsible 
 
 
 
