@@ -32,21 +32,7 @@ The HTML was run on the W3C Markup Validator and returned no errors.
 Using Google Chrome developer tools to test how each stage of the application displays at different screen width.
 
 
-Screen width/Page display|Galaxy S5|Pixel 2|Pixel 2XL|iPhone 5/SE|iPhone 6/7/8|iPhone X|iPad|iPad Pro|
------|-----|-----|-----|-----|-----|-----|-----|-----
-1|X|X|X|X|X|X|X|X|
-2|X|X|X|X|X|X|X|X|
-3|X|X|X|X|X|X|X|X|
-4|X|X|X|X|X|X|X|X|
-5|X|X|X|X|X|X|X|X|
-6|X|X|X|X|X|X|X|X|
-7|X|X|X|X|X|X|X|X|
-8|X|X|X|X|X|X|X|X|
-9|X|X|X|X|X|X|X|X|
-10|X|X|X|X|X|X|X|X|
-11|X|X|X|X|X|X|X|X|
-12|X|X|X|X|X|X|X|X|
-13|X|X|X|X|X|X|X|X|
+
 
 ###### Now The site Live at https://ramanathan03.github.io/faceD/ 
 ###### I wrote code for these website in cloud9 https://ide.c9.io/ram03/milestone_2 
