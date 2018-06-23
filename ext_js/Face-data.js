@@ -21,18 +21,19 @@ function makeGraphs(error, Photosdata) {
 
 
 function show_select_bar(ndx) {
-    var dim = ndx.dimension(function(d){
-        return[d.name];
+    var dim = ndx.dimension(function(d) {
+        return [d.name];
     });
     var group = dim.group();
 
     dc.selectMenu("#selector")
         .dimension(dim)
         .group(group)
-        .title(function (d){
-            return d.key[0]}); 
+        .title(function(d) {
+            return d.key[0];
+        });
 }
-      
+
 
 
 
@@ -92,7 +93,7 @@ function show_data_bar(ndx) {
 
 
         .xAxisLabel("Gender")
-        
+
         .yAxis().ticks(20);
 
 }
