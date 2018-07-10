@@ -7,113 +7,149 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FDataD</title>
 
-
+    
     <link rel="stylesheet" href="ext_css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.css" />
     <link rel="stylesheet" href="ext_css/main.css" type="text/css" />
 
-
-
-    <!--   js file of dc  d3 crossfilter  -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
-
-    <script src="ext_js/Face-data.js"></script>
+     <!--  Here's the link for dc  d3 crossfilter  -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
+    
+     
 
 </head>
 
 <body class="back">
-    <header class="container-fluid">
-
-        <div class="row">
-            <div class="col-xs-2   col-md-2" id="distance">
-                <a href="https://twitter.com/"><i class="fab fa-twitter"></i>Twitter</a></div>
-        </div>
-        <div class="row ">
-            <div class="col-xs-12 col-md-12 " id="font1">
-                <h1>Celebrities <i class="fab fa-facebook-square"></i> Usage</h1>
-
-                <button class="button1 btn btn-default btn-lg btn-info" type="button" onclick="javascript:introJs().start().setOptions({ 'skipLabel': 'Exit', 'tooltipPosition': 'right' });"> Quick Intro <i class="fas fa-info-circle"></i></button>
-
+    <header class="video-head container-fluid">
+        
+                <div class="video-fullscreen">
+             <video src="source/fb.mp4" autoplay="true" loop="true"></video>
+             </div>
+             <div class="header"></div>
+              <div class="header-content">
+                <h1>Celebrities <a href="index.html"><i class="fab fa-facebook-square"></i></a>  Usage</h1>
+                <p>This website serves 2018 survive about celebrities facebook usage <br>
+                We deliver with Responsive charts<br>
+                notice: This charts contains specific celebrities.</p>
+                
+            <button class="button1 btn btn-default btn-lg btn-info" type="button" onclick="javascript:introJs().start().setOptions({ 'skipLabel': 'Exit', 'tooltipPosition': 'right' });"> Quick Intro <i class="fas fa-info-circle"></i></button>
             </div>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-xs-12 col-md-12 center">
-                <p>This website serves 2018 survive about celebrities facebook usage </p>
-                <p>We deliver with Responsive charts</p>
-                <p>notice: This charts contains specific celebrities </p>
-            </div>
-        </div>
+            
+          
+          
+        
+       
     </header>
+    
 
 
 
 
-    <section class="container-fluid">
+    <section class="container-fluid ">
         <div class="row ">
             
-            <div class="col-xs-12  center-selector" >
+            <div class="col-xs-12 col-md-6  center-selector" >
+                 
                  <div data-intro="Choose your celebrity name here and get his/her Facebook Information" id="selector">
-                <h5>Select Name </h5></div>
+                     <h5>Select Name </h5>
+               </div>
                 </div>
            
         </div>
-      
+        <br>
+        <br>
+        
+        
+        
+     
         <div class="row">
             
-            <div class="col-xs-12 col-md-4   center box">
-                <div data-intro="This bar chart will gives you a gender information of your celebrities" id="chart_one">
-                <h5>Mens <i class="fas fa-male"></i> outnumber <i class="fas fa-female"></i> women</h5>
+            <div class="col-xs-12  center-selector ">
+                
+                <div class=" borde center-selector " data-intro="This bar chart will gives you a gender information of your celebrities" id="chart_one">
+                <h5 class="font">Mens <i class="fas fa-male"></i> outnumber <i class="fas fa-female"></i> women</h5>
+                
             </div>
+             
            </div>
-            <div class="col-xs-12 col-md-4 center Font2">
+           </div>
+           
+           <div class="row">
+            
+            <div class="col-xs-12 col-md-6  center-selector Font2">
                 <br>
-                <br>
-                <br>
-                <p><strong>BarChart:</strong>Contain more mens then womens and this barChart help you show the gender of celebrities. Well you obviously know there gender so it also help you to show how many mens and womens are used in these website and also If you only want see female/male celebrities name on selector you just click the barchart.<br> 
-                    <strong>PieChart:</strong>This chart contain the professional of the celebrities and we picked only three professional</p>
+               
+                 <p><strong>BarChart:</strong>Contain more mens then womens and this barChart help you show the gender of celebrities. Well you obviously know there gender so it also help you to show how many mens and womens are used in these website and also If you only want to see female or male celebrities name on selector simply just click on the barchart then the selector menu will only shows you one type of people.<br>
+                 </p>
             </div>
-            <div class="col-xs-12 col-md-4  center ">
-                <div data-intro="This pie chart will gives you a information about your celebrities professional" id="pie">
-                <h5>Professional of celebrities</h5></div>
             </div>
-        </div>
+          
+           <div class="row">
+            <div class="col-xs-12 center-selector ">
+               
+                <div class="borde center-selector" data-intro="This pie chart will gives you a information about your celebrities professional" id="pie">
+                     <h5 class="font">Professional of celebrities</h5>
+                </div>
+               
+                
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 center-selector Font2">
+                    <p><strong>PieChart:</strong>This chart contain the professional of the celebrities and we picked only three professional</p>
+                </div>
+                
+            </div>
+        
         
 
 
 
         <div class="row">
                
-            <div class="col-xs-12 col-md-4  center ">
-                <div data-intro="This chart gives you information of when your celebrities start Facebook officially" id="chart-composite">
-                <h5>Celebrities Facebook Started Year and<br> Years on facebook </h5></div>
+            <div class="col-xs-12   center-selector ">
+                <br>
                 
+                <div class="borde" data-intro="This chart gives you information of when your celebrities start Facebook officially" id="chart-composite">
+                    <h5 class="font">Celebrities Facebook Started Year and<br> Years on facebook </h5>
+                </div>
+                
+                 
             </div>
-            <div class="col-xs-12 col-md-4 center Font2">
+            </div>
+            <div class="row">
+            <div class="col-xs-12 col-md-6 center-selector Font2">
                 <br>
                 <br>
-                <p><strong>Scatter Chart:</strong>These Chart giving the information of facebook started year and years on Facebook.<br>
+                <p><strong>Scatter Chart:</strong>These Chart giving the information of facebook started year and years on Facebook.
+                <br>
                  <strong>BarChart:</strong>These chart will gives usage Rank for your celebrities by how many posts(pictures/videos/blog)they posting how more likely they using facebook. </p>
+           
             </div>
-            
-            <div class="col-xs-12 col-md-4  center">
-                <div data-intro="This chart gives you a facebook usage Rank of your celebrities " id="chart-scatter">
-                <h5>Usage Rank of Celebrities </h5>
+            <div class="col-xs-1 col-md-2">
+                <button  id="top" onclick="topFunction()">Top<i class="fas fa-arrow-to-top"></i></button>
+            </div>
+             
+            </div>
+            <div class="row">
+            <div class="col-xs-12   center-selector">
+                 
+                <div class="borde" data-intro="This chart gives you a facebook usage Rank of your celebrities " id="chart-scatter">
+               <h5 class="font">Usage Rank of Celebrities </h5>
             </div>
             </div>
         </div>
         
 
     </section>
+    
     <footer class="container-fluid text">
         <div class="row ">
             <div class="col-xs-12 col-sm-12 col-md-10 center ">Ramanathan Annes-Code Institute 2 milestone Project</div>
@@ -124,9 +160,10 @@
 
     </footer>
 
+        
 
-
-
+ <!-- This is my own js file link-->
+    <script src="ext_js/Face-data.js"></script>
 
 </body>
 

@@ -1,3 +1,5 @@
+// There is lot's of undefine property like queue d3 dc crossfilter I guess it's because the js file have different path I mean seperate file //
+
 queue()
     .defer(d3.csv, "Data/data.csv")
     .await(makeGraphs);
@@ -5,9 +7,7 @@ queue()
 function makeGraphs(error, Photosdata) {
     var ndx = crossfilter(Photosdata);
 
-
-
-
+    // there is some gap in some place It because for others understanding the code //
     show_data_bar(ndx);
     show_select_bar(ndx);
     show_pie_chart(ndx);
@@ -19,7 +19,7 @@ function makeGraphs(error, Photosdata) {
 
 }
 
-
+// show select bar function is rendering the select menu for users to select there celebrities//
 function show_select_bar(ndx) {
     var dim = ndx.dimension(function(d) {
         return [d.name];
@@ -176,4 +176,25 @@ function show_scatter_chart(ndx) {
         .xAxisLabel("Usage Rank");
 
 
+}
+
+$(document).ready(function() {
+
+    window.onscroll = function() { scrollFunction() };
+    // when it's meet 80px //
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("top").style.display = "block";
+        }
+        else {
+            document.getElementById("top").style.display = "none";
+        }
+    }
+
+
+});
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
