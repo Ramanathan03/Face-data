@@ -17,9 +17,10 @@ I used Lucidchart for create my wireframe https://www.lucidchart.com/
 
 I used DC D3 crossfilter  queue for creating my charts.
 
-There are 18 functions that I used in this website 
+I added background video for header, when I tested the video is completly working well.
 
-###### I didn't used bootstrap on my header 
+#### Target Audience
+My target audience are  who is looking for an detail about celebrities all in one place.
 
 #### Design
 The layout of the page has been kept very basic to keep the methods obvious and simple.

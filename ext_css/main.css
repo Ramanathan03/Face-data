@@ -1,18 +1,3 @@
-#distance a {
-  color: #ee5f5b;
-  background-color: #0d0d0d;
-  position: static;
-  visibility: visible;
-  width: 60px;
-  height: 20px;
-  border-radius: 4px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none; }
-
 .center {
   text-align: center; }
 
@@ -27,7 +12,7 @@
 
 .Font2 {
   font-family: 'Chela One', cursive;
-  color: white;
+  color: #926239;
   font-size: 14px;
   font-weight: 400; }
 
@@ -57,7 +42,7 @@ div .dc-chart {
 /* I used borde instead of broder because bootstrap have class called border */
 .borde {
   border: 3px hidden;
-  background: #141414; }
+  background: rgba(34, 84, 112, 0.5); }
 
 .back {
   margin: 0px;
@@ -76,6 +61,10 @@ div .dc-chart {
   width: 100%;
   height: 50vh;
   overflow: hidden; }
+
+.video-fullscreen video {
+  max-width: 100%;
+  min-width: 100%; }
 
 .header {
   height: 50vh;

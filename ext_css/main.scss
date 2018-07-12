@@ -1,147 +1,149 @@
- #distance a {
-  color: #ee5f5b;
-  background-color: #0d0d0d;
-  position: static;
-  visibility: visible;
-  width: 60px;
-  height: 20px;
-  border-radius: 4px;
+  .center {
+   text-align: center;
 
-  font: {
-   family: 'Roboto', sans-serif;
-   size: 15px;
-   weight: 500;
   }
 
-  text: {
-   transform: uppercase;
-   align: center;
-   decoration: none;
+  .center-selector {
+   margin: auto;
+   text-align: center;
+
+
   }
 
- }
+  %colorText {
+   background-color: black;
+   width: 100%;
+   height: 50%;
+   
 
- .center {
-  text-align: center;
+  }
 
- }
+  %code-for-life {
+   font-family: 'Chela One', cursive;
+   color:#926239;
+   font-size: 14px;
+   font-weight: 400;
+   
 
- .center-selector {
-  margin: auto;
-  text-align: center;
+  }
+
+  #top {
+   float: right;
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 30px;
+
+   border: none;
+   outline: none;
+   background-color: black;
+   color: white;
+   cursor: pointer;
+   padding: 15px;
+   border-radius: 10px;
+   font-size: 18px;
+  }
+
+  .font {
+   color: white;
+   display: block;
+   
+  }
+
+  div .dc-chart {
+   fill: #ffa500;
+   font-family: 'Open Sans', sans-serif;
+   
+  }
   
 
- }
-
- %colorText {
-  background-color: black;
-  width: 100%;
-  height: 50%;
-
- }
-
- %code-for-life {
-  font-family: 'Chela One', cursive;
-  color: white;
-  font-size: 14px;
-  font-weight: 400;
-
- }
-#top{
- float:right;
- display: none; 
-    position: fixed; 
-    bottom: 20px; 
-    right: 30px; 
-   
-    border: none; 
-    outline: none; 
-    background-color:black; 
-    color: white;
-    cursor: pointer; 
-    padding: 15px; 
-    border-radius: 10px; 
-    font-size: 18px;
-}
-
-.font{
- color:white;
- display:block;
-}
- div .dc-chart {
-  fill: #ffa500;
-  font-family: 'Open Sans', sans-serif;
- }
-
- .text {
-  @extend %colorText;
- }
-
- .Font2 {
-  @extend %code-for-life;
- }
-
- /* I used borde instead of broder because bootstrap have class called border */
-
- .borde {
-  border: 3px hidden;
-  background:#141414;
-
- }
-
- .back {
-
-  margin: 0px;
-  overflow-x: hidden;
-  line-height: 1.5;
- }
-
- .video-head {
-  height: 50vh;
-  display: flex;
-  align-items: center;
- }
-
- .video-fullscreen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50vh;
-  overflow: hidden;
- }
-
- .header {
-  height: 50vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #225470;
-  z-index: 1;
-  opacity: 0.5;
- }
-
- .header-content {
-  z-index: 2;
-  text-align: center;
-  margin: auto;
- }
-
- .header-content h1 {
-  font-size: 50px;
-  margin-bottom: 1;
-  color: white;
- }
-
- .header-content p {
-  color: white;
-  display: block;
-  margin-bottom: 0;
- }
- /* I used this media query  for taking off the video on mobile screen because I test it in mobile screen the video is not suitable so I decided to take off that */
- @media (max-width: 768px) { 
-  .video-fullscreen{
-   display:none;
+  .text {
+   @extend %colorText;
   }
- }
+
+  .Font2 {
+   @extend %code-for-life;
+  }
+
+  /* I used borde instead of broder because bootstrap have class called border */
+
+  .borde {
+   border: 3px hidden;
+   background:rgba(34, 84, 112, 0.5);
+   
+   
+
+  }
+
+  .back {
+
+   margin: 0px;
+   overflow-x: hidden;
+   line-height: 1.5;
+
+
+  }
+  
+
+  
+  .image-showcase{
+   
+  }
+
+  .video-head {
+   height: 50vh;
+   display: flex;
+   align-items: center;
+  }
+
+  .video-fullscreen {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 50vh;
+   overflow: hidden;
+  }
+
+  .video-fullscreen video {
+   max-width: 100%;
+   min-width: 100%;
+  }
+
+  .header {
+   height: 50vh;
+   width: 100vw;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: #225470;
+   z-index: 1;
+   opacity: 0.5;
+  }
+
+  .header-content {
+   z-index: 2;
+   text-align: center;
+   margin: auto;
+  }
+
+  .header-content h1 {
+   font-size: 50px;
+   margin-bottom: 1;
+   color: white;
+  }
+
+  .header-content p {
+   color: white;
+   display: block;
+   margin-bottom: 0;
+  }
+
+  /* I used this media query  for taking off the video on mobile screen because I test it in mobile screen the video is not suitable so I decided to take off that */
+
+  @media (max-width: 768px) {
+   .video-fullscreen {
+    display: none;
+   }
+  }
+  

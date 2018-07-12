@@ -19,7 +19,8 @@ function makeGraphs(error, Photosdata) {
 
 }
 
-// show select bar function is rendering the select menu for users to select there celebrities//
+/* show select bar function is rendering the select menu for users to select there celebrities. 
+Also I have a class called dc-chart in select menu in html it because I created with dc. */
 function show_select_bar(ndx) {
     var dim = ndx.dimension(function(d) {
         return [d.name];
@@ -190,7 +191,6 @@ $(document).ready(function() {
             document.getElementById("top").style.display = "none";
         }
     }
-
 
 });
 
